@@ -1,0 +1,7 @@
+package com.example.percentageApi.technicalChallenge.repository;
+
+import com.example.percentageApi.technicalChallenge.model.CallLog;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CallLogRepository extends JpaRepository<CallLog, Long> {
+}

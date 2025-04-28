@@ -8,13 +8,13 @@ It provides a **REST API** to perform percentage-based calculations and **logs e
 ## 🛠 How to Run the Project
 
 1. Package the application:
-
+```bash
    ./mvnw clean package
-
+```
 2. Start the containers:
-
+```bash
    docker-compose up --build
-
+```
    This will:
     - Start a **PostgreSQL 14** database (`technicalChallenge-db`).
     - Build and run the **Spring Boot application** (`technicalChallenge-api`).
@@ -24,6 +24,21 @@ It provides a **REST API** to perform percentage-based calculations and **logs e
    http://localhost:8080/
 
 ---
+## 📦 Running the Application from Docker Hub
+
+You can also pull and run the pre-built Docker image:
+
+Pull the image:
+```bash
+docker pull danielgarcia10/technicalchallenge-api:latest
+```
+Run the container:
+```bash
+docker run -p 8080:8080 danielgarcia10/technicalchallenge-api:latest
+```
+Important: Make sure your PostgreSQL database is running and accessible before starting the application.
+
+If you don't have a database, use the provided docker-compose.yml to bring up PostgreSQL.
 
 ## 📬 Available Endpoints
 
